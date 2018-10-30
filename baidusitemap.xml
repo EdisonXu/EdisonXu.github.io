@@ -97,13 +97,13 @@
         <title>Axon入门系列(八)：AxonFramework与SpringCloud的整合</title>
         <pubTime>2017-04-24T07:01:51.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -120,13 +120,13 @@
         <title>Axon入门系列(七)：DistributeCommand和DistributeEvent</title>
         <pubTime>2017-04-01T07:01:51.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -143,13 +143,13 @@
         <title>Axon入门系列(六)：Saga的使用</title>
         <pubTime>2017-03-31T03:37:32.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -166,13 +166,13 @@
         <title>Axon入门系列(五)：第一个正式Axon例子</title>
         <pubTime>2017-03-30T11:45:16.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -189,13 +189,13 @@
         <title>Axon入门系列(四)：Axon使用EventSourcing和AutoConfigure</title>
         <pubTime>2017-03-30T09:52:23.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -212,13 +212,13 @@
         <title>Axon入门系列(三)：Axon使用Jpa存储Aggregate状态</title>
         <pubTime>2017-03-30T07:52:23.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -305,6 +305,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://edisonxu.org/2017/01/12/newblog.html</loc>
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
@@ -321,7 +322,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://edisonxu.org/2017/01/22/akka-persistence-eventuate-comparison.html</loc>

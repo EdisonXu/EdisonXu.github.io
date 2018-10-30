@@ -97,9 +97,9 @@
     
       <category term="actor" scheme="http://edisonxu.com/tags/actor/"/>
     
-      <category term="并发" scheme="http://edisonxu.com/tags/%E5%B9%B6%E5%8F%91/"/>
-    
       <category term="并行" scheme="http://edisonxu.com/tags/%E5%B9%B6%E8%A1%8C/"/>
+    
+      <category term="并发" scheme="http://edisonxu.com/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   
@@ -461,11 +461,11 @@
     </summary>
     
     
-      <category term="akka" scheme="http://edisonxu.com/tags/akka/"/>
-    
       <category term="eventsourcing" scheme="http://edisonxu.com/tags/eventsourcing/"/>
     
       <category term="eventuate" scheme="http://edisonxu.com/tags/eventuate/"/>
+    
+      <category term="akka" scheme="http://edisonxu.com/tags/akka/"/>
     
   </entry>
   

@@ -78,9 +78,9 @@
          
         <tag>actor</tag>
          
-        <tag>并发</tag>
-         
         <tag>并行</tag>
+         
+        <tag>并发</tag>
          
          
            
@@ -268,23 +268,6 @@
 
     
   <url>
-    <loc>http://edisonxu.com/2017/03/02/java-thread-communication.html</loc>
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    <data>
-        <display>
-        <title>JAVA线程间通信的几种方式</title>
-        <pubTime>2017-03-02T13:10:44.000Z</pubTime>
-        
-        <tag>多线程</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://edisonxu.com/2018/02/01/jhipster-quick-start.html</loc>
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
     <data>
@@ -297,6 +280,23 @@
         <tag>JHipster</tag>
          
         <tag>微服务</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.com/2017/03/02/java-thread-communication.html</loc>
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    <data>
+        <display>
+        <title>JAVA线程间通信的几种方式</title>
+        <pubTime>2017-03-02T13:10:44.000Z</pubTime>
+        
+        <tag>多线程</tag>
          
          
            
@@ -331,11 +331,11 @@
         <title>(译)Akka Persistence和Eventuate的对比</title>
         <pubTime>2017-01-22T09:23:53.000Z</pubTime>
         
-        <tag>akka</tag>
-         
         <tag>eventsourcing</tag>
          
         <tag>eventuate</tag>
+         
+        <tag>akka</tag>
          
          
            

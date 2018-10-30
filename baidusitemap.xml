@@ -78,9 +78,9 @@
          
         <tag>actor</tag>
          
-        <tag>并行</tag>
-         
         <tag>并发</tag>
+         
+        <tag>并行</tag>
          
          
            
@@ -268,23 +268,6 @@
 
     
   <url>
-    <loc>http://edisonxu.org/2017/03/02/java-thread-communication.html</loc>
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    <data>
-        <display>
-        <title>JAVA线程间通信的几种方式</title>
-        <pubTime>2017-03-02T13:10:44.000Z</pubTime>
-        
-        <tag>多线程</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://edisonxu.org/2018/02/01/jhipster-quick-start.html</loc>
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
     <data>
@@ -315,6 +298,23 @@
         <pubTime>2017-01-12T09:42:14.000Z</pubTime>
         
         <tag>杂项</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2017/03/02/java-thread-communication.html</loc>
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    <data>
+        <display>
+        <title>JAVA线程间通信的几种方式</title>
+        <pubTime>2017-03-02T13:10:44.000Z</pubTime>
+        
+        <tag>多线程</tag>
          
          
            

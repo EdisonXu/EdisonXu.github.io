@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://edisonxu.org/2018/10/30/akka-actor.html</loc>
-    <lastmod>2018-10-30T01:15:05.771Z</lastmod>
+    <loc>http://edisonxu.org/2018/10/30/akka-remote-actor.html</loc>
+    <lastmod>2018-10-30T01:18:23.431Z</lastmod>
     <data>
         <display>
-        <title>Akka系列：（2）Actor入门</title>
-        <pubTime>2018-10-30T01:04:02.000Z</pubTime>
+        <title>Akka系列：（3）远程Actor</title>
+        <pubTime>2018-10-30T01:04:22.000Z</pubTime>
         
         <tag>akka</tag>
          
@@ -25,12 +25,12 @@
 
     
   <url>
-    <loc>http://edisonxu.org/2018/10/30/akka-remote-actor.html</loc>
-    <lastmod>2018-10-30T01:04:22.189Z</lastmod>
+    <loc>http://edisonxu.org/2018/10/30/akka-actor.html</loc>
+    <lastmod>2018-10-30T01:15:05.771Z</lastmod>
     <data>
         <display>
-        <title>Akka系列：（3）远程Actor</title>
-        <pubTime>2018-10-30T01:04:22.000Z</pubTime>
+        <title>Akka系列：（2）Actor入门</title>
+        <pubTime>2018-10-30T01:04:02.000Z</pubTime>
         
         <tag>akka</tag>
          
@@ -57,9 +57,9 @@
          
         <tag>actor</tag>
          
-        <tag>并行</tag>
-         
         <tag>并发</tag>
+         
+        <tag>并行</tag>
          
          
            
@@ -90,28 +90,6 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://edisonxu.org/2017/03/23/hello-cqrs.html</loc>
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    <data>
-        <display>
-        <title>CQRS和Event Sourcing系列（二）：基本概念</title>
-        <pubTime>2017-03-23T04:57:52.000Z</pubTime>
-        
-        <tag>eventsourcing</tag>
-         
-        <tag>CQRS</tag>
-         
-        <tag>axon</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://edisonxu.org/2017/01/12/newblog.html</loc>
@@ -188,6 +166,28 @@
 
     
   <url>
+    <loc>http://edisonxu.org/2017/03/23/hello-cqrs.html</loc>
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    <data>
+        <display>
+        <title>CQRS和Event Sourcing系列（二）：基本概念</title>
+        <pubTime>2017-03-23T04:57:52.000Z</pubTime>
+        
+        <tag>eventsourcing</tag>
+         
+        <tag>CQRS</tag>
+         
+        <tag>axon</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://edisonxu.org/2017/03/30/hello-axon.html</loc>
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
     <data>
@@ -200,50 +200,6 @@
         <tag>axon</tag>
          
         <tag>DDD</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edisonxu.org/2017/04/01/axon-distribute.html</loc>
-    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
-    <data>
-        <display>
-        <title>CQRS和Event Sourcing系列（八）：DistributeCommand和DistributeEvent</title>
-        <pubTime>2017-04-01T07:01:51.000Z</pubTime>
-        
-        <tag>eventsourcing</tag>
-         
-        <tag>CQRS</tag>
-         
-        <tag>axon</tag>
-         
-        <tag>DDD</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edisonxu.org/2017/01/22/akka-persistence-eventuate-comparison.html</loc>
-    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
-    <data>
-        <display>
-        <title>(译)Akka Persistence和Eventuate的对比</title>
-        <pubTime>2017-01-22T09:23:53.000Z</pubTime>
-        
-        <tag>akka</tag>
-         
-        <tag>eventsourcing</tag>
-         
-        <tag>eventuate</tag>
          
          
            
@@ -322,6 +278,29 @@
 
     
   <url>
+    <loc>http://edisonxu.org/2017/04/01/axon-distribute.html</loc>
+    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
+    <data>
+        <display>
+        <title>CQRS和Event Sourcing系列（八）：DistributeCommand和DistributeEvent</title>
+        <pubTime>2017-04-01T07:01:51.000Z</pubTime>
+        
+        <tag>eventsourcing</tag>
+         
+        <tag>CQRS</tag>
+         
+        <tag>axon</tag>
+         
+        <tag>DDD</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edisonxu.org/2017/03/30/axon-cqrs-example.html</loc>
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     <data>
@@ -336,6 +315,27 @@
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2017/01/22/akka-persistence-eventuate-comparison.html</loc>
+    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
+    <data>
+        <display>
+        <title>(译)Akka Persistence和Eventuate的对比</title>
+        <pubTime>2017-01-22T09:23:53.000Z</pubTime>
+        
+        <tag>eventsourcing</tag>
+         
+        <tag>eventuate</tag>
+         
+        <tag>akka</tag>
          
          
            

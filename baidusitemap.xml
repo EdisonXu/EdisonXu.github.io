@@ -4,20 +4,18 @@
 
     
   <url>
-    <loc>http://edisonxu.org/2017/04/24/axon-spring-cloud.html</loc>
-    <lastmod>2018-02-23T02:20:25.478Z</lastmod>
+    <loc>http://edisonxu.org/2018/10/30/akka-remote-actor.html</loc>
+    <lastmod>2018-10-30T01:04:22.189Z</lastmod>
     <data>
         <display>
-        <title>CQRS和Event Sourcing系列（九）：AxonFramework与SpringCloud的整合</title>
-        <pubTime>2017-04-24T07:01:51.000Z</pubTime>
+        <title>Akka系列：（3）远程Actor</title>
+        <pubTime>2018-10-30T01:04:22.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
+        <tag>akka</tag>
          
-        <tag>CQRS</tag>
+        <tag>actor</tag>
          
-        <tag>axon</tag>
-         
-        <tag>DDD</tag>
+        <tag>并发</tag>
          
          
            
@@ -26,6 +24,72 @@
     </url>
 
     
+  <url>
+    <loc>http://edisonxu.org/2018/10/30/akka-actor.html</loc>
+    <lastmod>2018-10-30T01:04:02.690Z</lastmod>
+    <data>
+        <display>
+        <title>Akka系列：（3）Actor的HelloWorld</title>
+        <pubTime>2018-10-30T01:04:02.000Z</pubTime>
+        
+        <tag>akka</tag>
+         
+        <tag>actor</tag>
+         
+        <tag>并发</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2018/10/30/akka-intro.html</loc>
+    <lastmod>2018-10-30T01:02:26.682Z</lastmod>
+    <data>
+        <display>
+        <title>Akka系列：（1）入门介绍</title>
+        <pubTime>2018-10-30T01:02:26.000Z</pubTime>
+        
+        <tag>akka</tag>
+         
+        <tag>actor</tag>
+         
+        <tag>并行</tag>
+         
+        <tag>并发</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2017/04/24/axon-spring-cloud.html</loc>
+    <lastmod>2018-02-23T02:20:25.478Z</lastmod>
+    <data>
+        <display>
+        <title>CQRS和Event Sourcing系列（九）：AxonFramework与SpringCloud的整合</title>
+        <pubTime>2017-04-24T07:01:51.000Z</pubTime>
+        
+        <tag>CQRS</tag>
+         
+        <tag>axon</tag>
+         
+        <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://edisonxu.org/2017/03/23/hello-cqrs.html</loc>
@@ -35,11 +99,11 @@
         <title>CQRS和Event Sourcing系列（二）：基本概念</title>
         <pubTime>2017-03-23T04:57:52.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -47,6 +111,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://edisonxu.org/2017/01/12/newblog.html</loc>
@@ -57,44 +122,6 @@
         <pubTime>2017-01-12T09:42:14.000Z</pubTime>
         
         <tag>杂项</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edisonxu.org/2017/03/30/hello-axon.html</loc>
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    <data>
-        <display>
-        <title>CQRS和Event Sourcing系列（三）： Hello,Axon3</title>
-        <pubTime>2017-03-30T06:47:46.000Z</pubTime>
-        
-        <tag>CQRS</tag>
-         
-        <tag>axon</tag>
-         
-        <tag>DDD</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edisonxu.org/2017/03/02/java-thread-communication.html</loc>
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    <data>
-        <display>
-        <title>JAVA线程间通信的几种方式</title>
-        <pubTime>2017-03-02T13:10:44.000Z</pubTime>
-        
-        <tag>多线程</tag>
          
          
            
@@ -144,6 +171,67 @@
 
     
   <url>
+    <loc>http://edisonxu.org/2017/03/02/java-thread-communication.html</loc>
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    <data>
+        <display>
+        <title>JAVA线程间通信的几种方式</title>
+        <pubTime>2017-03-02T13:10:44.000Z</pubTime>
+        
+        <tag>多线程</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2017/03/30/hello-axon.html</loc>
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    <data>
+        <display>
+        <title>CQRS和Event Sourcing系列（三）： Hello,Axon3</title>
+        <pubTime>2017-03-30T06:47:46.000Z</pubTime>
+        
+        <tag>CQRS</tag>
+         
+        <tag>axon</tag>
+         
+        <tag>DDD</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2017/04/01/axon-distribute.html</loc>
+    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
+    <data>
+        <display>
+        <title>CQRS和Event Sourcing系列（八）：DistributeCommand和DistributeEvent</title>
+        <pubTime>2017-04-01T07:01:51.000Z</pubTime>
+        
+        <tag>CQRS</tag>
+         
+        <tag>axon</tag>
+         
+        <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edisonxu.org/2017/03/30/axon-cqrs-example.html</loc>
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     <data>
@@ -151,13 +239,36 @@
         <title>CQRS和Event Sourcing系列（六）： 第一个正式Axon例子</title>
         <pubTime>2017-03-30T11:45:16.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2017/03/31/axon-saga.html</loc>
+    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
+    <data>
+        <display>
+        <title>CQRS和Event Sourcing系列（七）：Saga的使用</title>
+        <pubTime>2017-03-31T03:37:32.000Z</pubTime>
+        
+        <tag>CQRS</tag>
+         
+        <tag>axon</tag>
+         
+        <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -174,13 +285,36 @@
         <title>CQRS和Event Sourcing系列（四）： Axon使用Jpa存储Aggregate状态</title>
         <pubTime>2017-03-30T07:52:23.000Z</pubTime>
         
-        <tag>eventsourcing</tag>
-         
         <tag>CQRS</tag>
          
         <tag>axon</tag>
          
         <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://edisonxu.org/2017/03/30/axon-event-sourcing.html</loc>
+    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
+    <data>
+        <display>
+        <title>CQRS和Event Sourcing系列（五）： Axon使用EventSourcing和AutoConfigure</title>
+        <pubTime>2017-03-30T09:52:23.000Z</pubTime>
+        
+        <tag>CQRS</tag>
+         
+        <tag>axon</tag>
+         
+        <tag>DDD</tag>
+         
+        <tag>eventsourcing</tag>
          
          
            
@@ -202,75 +336,6 @@
         <tag>eventsourcing</tag>
          
         <tag>eventuate</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edisonxu.org/2017/04/01/axon-distribute.html</loc>
-    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
-    <data>
-        <display>
-        <title>CQRS和Event Sourcing系列（八）：DistributeCommand和DistributeEvent</title>
-        <pubTime>2017-04-01T07:01:51.000Z</pubTime>
-        
-        <tag>eventsourcing</tag>
-         
-        <tag>CQRS</tag>
-         
-        <tag>axon</tag>
-         
-        <tag>DDD</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edisonxu.org/2017/03/30/axon-event-sourcing.html</loc>
-    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
-    <data>
-        <display>
-        <title>CQRS和Event Sourcing系列（五）： Axon使用EventSourcing和AutoConfigure</title>
-        <pubTime>2017-03-30T09:52:23.000Z</pubTime>
-        
-        <tag>eventsourcing</tag>
-         
-        <tag>CQRS</tag>
-         
-        <tag>axon</tag>
-         
-        <tag>DDD</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://edisonxu.org/2017/03/31/axon-saga.html</loc>
-    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
-    <data>
-        <display>
-        <title>CQRS和Event Sourcing系列（七）：Saga的使用</title>
-        <pubTime>2017-03-31T03:37:32.000Z</pubTime>
-        
-        <tag>eventsourcing</tag>
-         
-        <tag>CQRS</tag>
-         
-        <tag>axon</tag>
-         
-        <tag>DDD</tag>
          
          
            

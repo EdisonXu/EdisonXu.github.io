@@ -78,9 +78,9 @@
          
         <tag>actor</tag>
          
-        <tag>并行</tag>
-         
         <tag>并发</tag>
+         
+        <tag>并行</tag>
          
          
            
@@ -268,6 +268,23 @@
 
     
   <url>
+    <loc>http://edisonxu.com/2017/01/12/newblog.html</loc>
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    <data>
+        <display>
+        <title>博客新家</title>
+        <pubTime>2017-01-12T09:42:14.000Z</pubTime>
+        
+        <tag>杂项</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://edisonxu.com/2018/02/01/jhipster-quick-start.html</loc>
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
     <data>
@@ -305,23 +322,6 @@
     </url>
 
     
-  <url>
-    <loc>http://edisonxu.com/2017/01/12/newblog.html</loc>
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    <data>
-        <display>
-        <title>博客新家</title>
-        <pubTime>2017-01-12T09:42:14.000Z</pubTime>
-        
-        <tag>杂项</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://edisonxu.com/2017/01/22/akka-persistence-eventuate-comparison.html</loc>
@@ -331,11 +331,11 @@
         <title>(译)Akka Persistence和Eventuate的对比</title>
         <pubTime>2017-01-22T09:23:53.000Z</pubTime>
         
+        <tag>akka</tag>
+         
         <tag>eventsourcing</tag>
          
         <tag>eventuate</tag>
-         
-        <tag>akka</tag>
          
          
            

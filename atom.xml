@@ -47,11 +47,11 @@
   </entry>
   
   <entry>
-    <title>Akka系列：（3）Actor的HelloWorld</title>
+    <title>Akka系列：（2）Actor入门</title>
     <link href="http://edisonxu.org/2018/10/30/akka-actor.html"/>
     <id>http://edisonxu.org/2018/10/30/akka-actor.html</id>
     <published>2018-10-30T01:04:02.000Z</published>
-    <updated>2018-10-30T01:04:02.690Z</updated>
+    <updated>2018-10-30T01:15:05.771Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Actor模型"><a href="#Actor模型" class="headerlink" title="Actor模型"></a>Actor模型</h2><p>由于<code>AKka</code>的核心是<code>Actor</code>，而<code>Actor</code>是按照<code>Actor</code>模型进行实现的，所以在使用<code>Akka</code>之前，有必要弄清楚什么是<code>Actor</code>模型。<br><code>Actor模型</code>最早是1973年Carl Hewitt、Peter Bishop和Richard Seiger的论文中出现的，受物理学中的广义相对论(<a href="https://en.wikipedia.org/wiki/General_relativity" target="_blank" rel="noopener">general relativity</a>)和量子力学(<a href="https://en.wikipedia.org/wiki/Quantum_mechanics" target="_blank" rel="noopener">quantum mechanics</a>)所启发，为解决并发计算的一个数学模型。</p><p><code>Actor模型</code>所推崇的哲学是”一切皆是Actor”，这与面向对象编程的”一切皆是对象”类似。<br>但不同的是，在模型中，Actor是一个运算实体，它遵循以下规则：</p><ul><li>接受外部消息，不占用调用方（消息发送者）的CPU时间片</li><li>通过消息改变自身的状态</li><li>创建有限数量的新<code>Actor</code></li><li>发送有限数量的消息给其他<code>Actor</code></li></ul><p>很多语言都实现了<code>Actor模型</code>，而其中最出名的实现要属<code>Erlang</code>的。<code>Akka</code>的实现借鉴了不少<code>Erlang</code>的经验。</p><h2 id="Actor模型的实现"><a href="#Actor模型的实现" class="headerlink" title="Actor模型的实现"></a>Actor模型的实现</h2><p><code>Akka</code>中<code>Actor</code>接受外部消息是靠<code>Mailbox</code>，参见下图<br><img src="../images/2018/10/actor-model.png" alt=""></p><p>对于<code>Akka</code>，它又做了一些约束：</p><ul><li>消息是不可变的</li><li>Actor本身是无状态的</li></ul><h2 id="基本的Actor例子"><a href="#基本的Actor例子" class="headerlink" title="基本的Actor例子"></a>基本的Actor例子</h2><p>本文用Maven管理一个Java的Akka项目。当日，你可以直接从<a href="https://developer.lightbend.com/start/?group=akka下载一个官方的例子。" target="_blank" rel="noopener">https://developer.lightbend.com/start/?group=akka下载一个官方的例子。</a></p><h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.typesafe.akka<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>akka-actor_2.12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;akka-version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="编写Actor"><a href="#编写Actor" class="headerlink" title="编写Actor"></a>编写Actor</h3><p>通常情况下，我们只需要直接继承<code>AbstractActor</code>就足够了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EchoActor</span> <span class="keyword">extends</span> <span class="title">AbstractActor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> LoggingAdapter log = Logging.getLogger(getContext().getSystem(), <span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Receive <span class="title">createReceive</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> receiveBuilder()</span><br><span class="line">                .match(String.class, s -&gt; &#123;</span><br><span class="line">                    log.info(<span class="string">"Received String message: &#123;&#125;"</span>, s);</span><br><span class="line">                &#125;)</span><br><span class="line">                .matchAny(o -&gt; log.info(<span class="string">"Received unknown message"</span>))</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><code>AbstractActor</code>要求必须实现createReceive()方法，该方法返回一个Receive定义了该Actor能够处理哪些消息，以及怎么处理。这里只简单的打印一个日志。</p><h3 id="Actor的启动"><a href="#Actor的启动" class="headerlink" title="Actor的启动"></a>Actor的启动</h3><p><code>Akka</code>中，用<code>ActorSystem</code>来管理所有的<code>Actor</code>，包括其生命周期及交互。<br>启动Actor，有两种方式</p><ol><li>使用内置的main方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">akka.Main.main(<span class="keyword">new</span> String[]&#123;EchoActor.class.getName()&#125;);</span><br></pre></td></tr></table></figure></li></ol><p>这里会自动将EchoActor创建出来。</p><ol><li>手动创建<code>ActorSystem</code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ActorSystem system = ActorSystem.create(<span class="string">"app"</span>);</span><br><span class="line">ActorRef echoActor = system.actorOf(Props.create(EchoActor.class), <span class="string">"echoActor"</span>);</span><br></pre></td></tr></table></figure></li></ol><p>两种方法本质上其实是一样的，只不过第一种里面把创建<code>ActorSystem</code>等工作封装好了罢了。</p><blockquote><p>注意：<br><code>ActorSystem</code>是一个较重的存在，一般一个应用里，只需要一个<code>ActorSystem</code>。<br>在同一个<code>ActorySystem</code>中，Actor不能重名。</p></blockquote><h3 id="Actor的Path"><a href="#Actor的Path" class="headerlink" title="Actor的Path"></a>Actor的Path</h3><p><code>Akka</code>中的<code>Actor</code>不能直接被new出来，而是按一棵树来管理的，每个<code>Actor</code>都有一个树上的<code>path</code>：<br><img src="../images/2018/10/actor_top_tree.png" alt="Akka Actor Hierarchy"></p><p>实际上，在我们创建自己的<code>Actor</code>之前，<code>Akka</code>已经在系统中创建了三个名字中带有<code>guardian</code>的<code>Actor</code>：</p><ul><li><code>/</code> 最顶层的 <code>root guardian</code>。它是系统中所有<code>Actor</code>的父，系统停止时，它是最后一个停止的</li><li><code>/user</code> <code>guardian</code>。这是用户自行创建的所有<code>Actor</code>的父。这里的user跟用户没有一毛钱关系</li><li><code>/system</code> 系统<code>guardian</code></li></ul><p>在上面的例子里，我们使用的是<code>system.actorOf</code>来创建<code>Actor</code>，<code>actorOf</code>返回的并不是<code>Actor</code>自身，而是一个<code>ActorRef</code>，它屏蔽了<code>Actor</code>的具体物理地址(可能是本jvm，也可以是其他jvm或另一台机器)。通过直接打印<code>ActorRef</code>看到<code>Actor</code>的<code>path</code>，比如本例是<code>/app/user/echoActor</code>。<br>像这种直接由system创建出来的<code>Actor</code>被称为顶层<code>Actor</code>，一般系统设计的时候，顶层<code>Actor</code>数量往往不会太多，大都由顶层<code>Actor</code>通过<code>getContext().actorOf()</code>派生出来其他的<code>Actor</code>。</p><h3 id="Actor间的相互调用-tell-ask"><a href="#Actor间的相互调用-tell-ask" class="headerlink" title="Actor间的相互调用(tell, ask)"></a>Actor间的相互调用(tell, ask)</h3><p>在<code>Actor模型</code>中，<code>Actor</code>本身的执行是不占用被调用方(<code>akka</code>中的话是消息的发送者)的CPU时间片，所以，<code>akka</code>的<code>Actor</code>在相互调用时均是异步的行为。</p><ul><li>tell 发送一个消息到目标<code>Actor</code>后立刻返回</li><li>ask 发送一个消息到目标<code>Actor</code>，并返回一个<code>Future</code>对象，可以通过该对象获取结果。但前提是目标<code>Actor</code>会有Reply才行，如果没有Reply，则抛出超时异常。</li></ul><h4 id="Tell：-Fire-forget"><a href="#Tell：-Fire-forget" class="headerlink" title="Tell： Fire-forget"></a>Tell： Fire-forget</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">target.tell(message, getSelf());</span><br></pre></td></tr></table></figure><p>其中第二个参数是发送者。之所以要带上这个是为了方便target处理完逻辑后，如果需要返回结果，可以也通过<code>tell</code>异步通知回去。</p><h4 id="Ask-Send-And-Recieve-Future"><a href="#Ask-Send-And-Recieve-Future" class="headerlink" title="Ask: Send-And-Recieve-Future"></a>Ask: Send-And-Recieve-Future</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Future&lt;Object&gt; future = Patterns.ask(echoActor, <span class="string">"echo me"</span>, <span class="number">200</span>);</span><br><span class="line">future.onSuccess(<span class="keyword">new</span> OnSuccess&lt;Object&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(Object result)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, system.dispatcher());</span><br></pre></td></tr></table></figure><p>由于之前的<code>EchoActor</code>并没有返回Reply，所以这里什么都没打印。<br>修改<code>EchoActor</code>如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Receive <span class="title">createReceive</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> receiveBuilder()</span><br><span class="line">            .match(String.class, s -&gt; &#123;</span><br><span class="line">                log.info(<span class="string">"Received String message: &#123;&#125;"</span>, s);</span><br><span class="line">                ActorRef sender = getSender();</span><br><span class="line">                <span class="keyword">if</span>(!sender.isTerminated())</span><br><span class="line">                    sender.tell(<span class="string">"Receive: "</span>+s, getSelf());</span><br><span class="line">            &#125;)</span><br><span class="line">            .matchAny(o -&gt; log.info(<span class="string">"Received unknown message"</span>))</span><br><span class="line">            .build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>由于前面两个消息的发送者是<code>ActorRef.noSender()</code>，所以<code>EchoActor</code>中<code>getSender()</code>返回的是<code>DeadLetter</code>的<code>ActorRef</code>，terminated值为真。只有最后的值打印出来：<code>Receive: echo me</code></p><h3 id="Actor的停止"><a href="#Actor的停止" class="headerlink" title="Actor的停止"></a>Actor的停止</h3><p>停止一个<code>Actor</code>有三种方法：</p><ul><li>调用ActorSystem或getContext()的stop方法</li><li>给目标发送一个毒药消息：<code>akka.actor.PoisonPill.getInstance()</code></li><li>给目标发送一个Kill消息： <code>akka.actor.Kill.getInstance()</code></li></ul><p>当使用前两种方法时，<code>Actor</code>的行为是：</p><ol><li>挂起它的<code>Mailbox</code>，停止接受新消息</li><li>给它所有的子<code>Actor</code>发送stop命令，并等待所有子<code>Actor</code>停止</li><li>最终停止自己</li></ol><blockquote><p>由于停止<code>Actor</code>是一个异步的操作，在目标<code>Actor</code>被完全停止之前，如果要创建一个同名的<code>Actor</code>，则会收到<code>InvalidActorNameException</code>。</p></blockquote><p>“kill”的方法略有不同，它会抛出一个<code>ActorKilledException</code>到父层去，由父层实现决定如何处理。<br>一般来说，不应该依赖于<code>PoisonPill</code>和<code>Kill</code>去关闭<code>Actor</code>。推荐的方法是自定义关闭消息，交由<code>Actor</code>处理。</p><p>如果需要等待关闭结果，可以采用<code>PatternsCS.gracefulStop</code>，它会返回一个<code>CompletionStage</code>，可以进行到期处理：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> akka.pattern.PatternsCS.gracefulStop;</span><br><span class="line"><span class="keyword">import</span> akka.pattern.AskTimeoutException;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.CompletionStage;</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  CompletionStage&lt;Boolean&gt; stopped =</span><br><span class="line">    gracefulStop(actorRef, Duration.ofSeconds(<span class="number">5</span>), Manager.SHUTDOWN);</span><br><span class="line">  stopped.toCompletableFuture().get(<span class="number">6</span>, TimeUnit.SECONDS);</span><br><span class="line">  <span class="comment">// the actor has been stopped</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (AskTimeoutException e) &#123;</span><br><span class="line">  <span class="comment">// the actor wasn't stopped within 5 seconds</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>发送一个自定义的消息，如<code>Manager.SHUTDOWN</code>，等待关闭，如果6秒未关闭，再去处理。</p>]]></content>
     
@@ -156,13 +156,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -194,13 +194,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -223,13 +223,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -252,13 +252,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -290,13 +290,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -323,13 +323,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -387,11 +387,11 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   

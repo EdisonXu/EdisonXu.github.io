@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://edisonxu.org/2018/10/30/akka-remote-actor.html</loc>
+    <loc>http://edisonxu.org/2018/10/30/akka-actor.html</loc>
     
-    <lastmod>2018-10-30T01:04:22.189Z</lastmod>
+    <lastmod>2018-10-30T01:15:05.771Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2018/10/30/akka-actor.html</loc>
+    <loc>http://edisonxu.org/2018/10/30/akka-remote-actor.html</loc>
     
-    <lastmod>2018-10-30T01:04:02.690Z</lastmod>
+    <lastmod>2018-10-30T01:04:22.189Z</lastmod>
     
   </url>
   
@@ -86,7 +86,7 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/03/30/axon-cqrs-example.html</loc>
+    <loc>http://edisonxu.org/2017/01/22/akka-persistence-eventuate-comparison.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     
@@ -114,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/01/22/akka-persistence-eventuate-comparison.html</loc>
+    <loc>http://edisonxu.org/2017/03/30/axon-cqrs-example.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     

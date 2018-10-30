@@ -30,28 +30,14 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/about/index.html</loc>
-    
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://edisonxu.org/2018/02/01/jhipster-quick-start.html</loc>
-    
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://edisonxu.org/2017/03/02/java-thread-communication.html</loc>
-    
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://edisonxu.org/2017/03/23/hello-cqrs.html</loc>
+    
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edisonxu.org/about/index.html</loc>
     
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
     
@@ -72,6 +58,20 @@
   </url>
   
   <url>
+    <loc>http://edisonxu.org/2018/02/01/jhipster-quick-start.html</loc>
+    
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edisonxu.org/2017/03/02/java-thread-communication.html</loc>
+    
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://edisonxu.org/2017/03/30/hello-axon.html</loc>
     
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
@@ -79,14 +79,21 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/03/31/axon-saga.html</loc>
+    <loc>http://edisonxu.org/2017/04/01/axon-distribute.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/03/30/axon-event-sourcing.html</loc>
+    <loc>http://edisonxu.org/2017/01/22/akka-persistence-eventuate-comparison.html</loc>
+    
+    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edisonxu.org/2017/03/31/axon-saga.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     
@@ -100,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/04/01/axon-distribute.html</loc>
+    <loc>http://edisonxu.org/2017/03/30/axon-event-sourcing.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     
@@ -108,13 +115,6 @@
   
   <url>
     <loc>http://edisonxu.org/2017/03/30/axon-cqrs-example.html</loc>
-    
-    <lastmod>2018-02-23T02:19:15.402Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://edisonxu.org/2017/01/22/akka-persistence-eventuate-comparison.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     

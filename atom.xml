@@ -461,11 +461,11 @@
     </summary>
     
     
+      <category term="akka" scheme="http://edisonxu.org/tags/akka/"/>
+    
       <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
       <category term="eventuate" scheme="http://edisonxu.org/tags/eventuate/"/>
-    
-      <category term="akka" scheme="http://edisonxu.org/tags/akka/"/>
     
   </entry>
   

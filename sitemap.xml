@@ -30,14 +30,7 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/01/12/newblog.html</loc>
-    
-    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://edisonxu.org/2017/03/17/lean-and-ddd.html</loc>
+    <loc>http://edisonxu.org/about/index.html</loc>
     
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
     
@@ -65,7 +58,14 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/about/index.html</loc>
+    <loc>http://edisonxu.org/2017/01/12/newblog.html</loc>
+    
+    <lastmod>2018-02-23T02:19:15.417Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://edisonxu.org/2017/03/17/lean-and-ddd.html</loc>
     
     <lastmod>2018-02-23T02:19:15.417Z</lastmod>
     
@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/03/30/axon-jpa.html</loc>
+    <loc>http://edisonxu.org/2017/03/30/axon-event-sourcing.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://edisonxu.org/2017/03/30/axon-event-sourcing.html</loc>
+    <loc>http://edisonxu.org/2017/03/30/axon-jpa.html</loc>
     
     <lastmod>2018-02-23T02:19:15.402Z</lastmod>
     

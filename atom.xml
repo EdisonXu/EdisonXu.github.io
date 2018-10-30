@@ -97,9 +97,9 @@
     
       <category term="actor" scheme="http://edisonxu.org/tags/actor/"/>
     
-      <category term="并发" scheme="http://edisonxu.org/tags/%E5%B9%B6%E5%8F%91/"/>
-    
       <category term="并行" scheme="http://edisonxu.org/tags/%E5%B9%B6%E8%A1%8C/"/>
+    
+      <category term="并发" scheme="http://edisonxu.org/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   
@@ -156,13 +156,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -194,13 +194,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -223,13 +223,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -252,13 +252,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -290,13 +290,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
@@ -323,13 +323,13 @@
     </summary>
     
     
+      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
+    
       <category term="CQRS" scheme="http://edisonxu.org/tags/CQRS/"/>
     
       <category term="axon" scheme="http://edisonxu.org/tags/axon/"/>
     
       <category term="DDD" scheme="http://edisonxu.org/tags/DDD/"/>
-    
-      <category term="eventsourcing" scheme="http://edisonxu.org/tags/eventsourcing/"/>
     
   </entry>
   
